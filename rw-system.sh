@@ -324,3 +324,8 @@ for f in /vendor/lib{,64}/hw/com.qti.chi.override.so;do
 
     setprop sys.phh.xx.manufacturer "$(getprop ro.product.vendor.manufacturer)"
 done
+
+if getprop ro.board.platform |grep -q -i -e mt6797 -e mt6757;then
+    setprop persist.sys.bt.unsupport.features 00000001
+    setprop persist.sys.bt.unsupport.states 000000000000000000000011111
+fi

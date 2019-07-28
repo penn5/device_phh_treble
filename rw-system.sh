@@ -322,7 +322,7 @@ if getprop ro.vendor.build.fingerprint | grep -qE '^xiaomi/(daisy|wayne)/(daisy|
     setprop audio.camerasound.force true
 fi
 
-mount -o bind /mnt/phh/empty_dir /vendor/etc/audio || true
+#mount -o bind /mnt/phh/empty_dir /vendor/etc/audio || true
 
 for f in /vendor/lib{,64}/hw/com.qti.chi.override.so;do
     [ ! -f $f ] && continue
